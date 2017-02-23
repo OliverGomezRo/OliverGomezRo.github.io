@@ -1,4 +1,4 @@
-var lataForma = new THREE.CylinderGeometry(6, 6, 10);
+var lataForma = new THREE.CylinderGeometry(3, 3, 10);
 var tapaForma = new THREE.CylinderGeometry(4, 6, 0.5);
 tapaForma.translate(0,0,5);
 
