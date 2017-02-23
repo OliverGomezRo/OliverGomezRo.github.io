@@ -1,6 +1,6 @@
-var lataForma = new THREE.CylinderGeometry(1, 1, 2);
-var tapaForma = new THREE.CylinderGeometry(0.75, 1, 0.1);
-tapaForma.translate(0,1,0);
+var lataForma = new THREE.CylinderGeometry(6, 6, 10);
+var tapaForma = new THREE.CylinderGeometry(4, 6, 0.5);
+tapaForma.translate(0,5,0);
 
 var lataMalla = new THREE.Mesh(lataForma);
 var tapaMalla = new THREE.Mesh(tapaForma);
@@ -14,7 +14,7 @@ var escena = new THREE.Scene();
 escena.add(rMalla);
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 15;
+camara.position.z = 10;
 
 renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95 );
