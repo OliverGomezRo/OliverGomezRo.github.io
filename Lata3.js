@@ -13,11 +13,12 @@ var arbolMalla = new THREE.Mesh(arbolForma, material);
 var escena = new THREE.Scene();
 escena.add(arbolMalla);
 
+var camara = new THREE.PerspectiveCamera();
+camara.position.z = 15
+camara.position.y = 10;
+
 renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95 );
 document.body.appendChild( renderizador.domElement );
 renderizador.render( escena, camara );
 
-var camara = new THREE.PerspectiveCamera();
-camara.position.z = 15
-camara.position.y = 10;
