@@ -13,7 +13,7 @@ LataFForma.merge(LataMalla.geometry, LataMalla.matrix);
 LataFForma.merge(TapaMalla.geometry, TapaMalla.matrix);
 LataFForma.merge(Tapa2Malla.geometry, Tapa2Malla.matrix);
 
-var material = new THREE.MeshNormalMaterial();
+var material = new THREE.MeshNormalMaterial({ color: 0xff0000 });
 var LataMalla = new THREE.Mesh(LataFForma, material);
 var escena = new THREE.Scene();
 escena.add(LataMalla);
