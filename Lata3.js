@@ -19,4 +19,5 @@ document.body.appendChild( renderizador.domElement );
 renderizador.render( escena, camara );
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 15;
+camara.position.z = 15
+camara.position.y = 10;
