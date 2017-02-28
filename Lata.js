@@ -1,11 +1,11 @@
-var lataForma = new THREE.CylinderGeometry(3, 3, 10);
-var tapaForma = new THREE.CylinderGeometry(2, 3, 0.5);
+var lataForma = new THREE.CylinderGeometry(5, 5, 20);
+var tapaForma = new THREE.CylinderGeometry(4, 5, 2);
 tapaForma.translate(0,10,0);
 
 var geometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
 var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
 var cylinder = new THREE.Mesh( geometry, material );
-scene.add( cylinder );
+
 
 var lataMalla = new THREE.Mesh(lataForma);
 var tapaMalla = new THREE.Mesh(tapaForma);
@@ -17,7 +17,7 @@ var material = new THREE.MeshNormalMaterial();
 var rMalla = new THREE.Mesh(rForma, material);
 var escena = new THREE.Scene();
 escena.add(rMalla);
-
+camara.position.z = 40;
 var camara = new THREE.PerspectiveCamera();
 
 
