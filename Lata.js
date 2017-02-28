@@ -14,8 +14,8 @@ var pie2Malla = new THREE.Mesh(pie2);
 var rForma = new THREE.Geometry();
 rForma.merge(lataMalla.geometry, lataMalla.matrix);
 rForma.merge(tapaMalla.geometry, tapaMalla.matrix);
-rForma.merge(pie1.geometry, pie1.matrix); 
-rForma.merge(pie2.geometry, pie2.matrix);
+rForma.merge(pie1Malla.geometry, pie1Malla.matrix); 
+rForma.merge(pie2Malla.geometry, pie2Malla.matrix);
 
 var material = new THREE.MeshNormalMaterial();
 var rMalla = new THREE.Mesh(rForma, material);
