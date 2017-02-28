@@ -1,20 +1,29 @@
-var lataForma = new THREE.CylinderGeometry(5, 5, 20);
-var tapaForma = new THREE.CylinderGeometry(4, 5, 2);
-tapaForma.translate(0,10,0);
+var lataForma = new THREE.CylinderGeometry(1, 1, 2);
+var tapaForma = new THREE.CylinderGeometry(0.75, 1, 1);
+var pie1 = new THREE.CylinderGeometry(0.25, 0.25, 0.75);
+var pie2 = new THREE.CylinderGeometry(0.25, 0.25, 0.75);
+tapaForma.translate(0,2,0);
+pie1.translate(-1,-2,0);
+pie2.translate(1,-2,0);
 
 var lataMalla = new THREE.Mesh(lataForma);
 var tapaMalla = new THREE.Mesh(tapaForma);
+var pie1Malla = new THREE.Mesh(pie1);
+var pie2Malla = new THREE.Mesh(pie2);
+
 var rForma = new THREE.Geometry();
 rForma.merge(lataMalla.geometry, lataMalla.matrix);
 rForma.merge(tapaMalla.geometry, tapaMalla.matrix);
+rForma.merge(pie1.geometry, pie1.matrix); 
+rForma.merge(pie2.geometry, pie2.matrix);
 
 var material = new THREE.MeshNormalMaterial();
 var rMalla = new THREE.Mesh(rForma, material);
 var escena = new THREE.Scene();
 escena.add(rMalla);
-camara.position.z = 40;
-var camara = new THREE.PerspectiveCamera();
 
+var camara = new THREE.PerspectiveCamera();
+camara.position.z = 10;
 
 renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95 );
