@@ -1,8 +1,8 @@
 var LataForma = new THREE.CylinderGeometry(5, 5, 10);
 var TapaForma = new THREE.CylinderGeometry(4,5,2);
-var Tapa2Forma = new THREE.CylinderGeometry(4,5,2);
-TapaForma.translate(0,5,0);
-Tapa2Forma.translate(0,-5,0);
+var Tapa2Forma = new THREE.CylinderGeometry(5,4,2);
+TapaForma.translate(0,6,0);
+Tapa2Forma.translate(0,-6,0);
 
 var LataMalla = new THREE.Mesh(LataForma);
 var TapaMalla = new THREE.Mesh(TapaForma);
