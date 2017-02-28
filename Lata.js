@@ -1,29 +1,29 @@
-var lataForma = new THREE.CylinderGeometry(1, 1, 2);
-var tapaForma = new THREE.CylinderGeometry(0.75, 1, 1);
-var pie1 = new THREE.CylinderGeometry(0.25, 0.25, 0.75);
-var pie2 = new THREE.CylinderGeometry(0.25, 0.25, 0.75);
-tapaForma.translate(0,2,0);
-pie1.translate(-1,-2,0);
-pie2.translate(1,-2,0);
+var LataForma = new THREE.CylinderGeometry(5, 5, 10);
+var TapaForma = new THREE.CylinderGeometry(4,5,2);
+var Tapa2Forma = new THREE.CylinderGeometry(5,4,1.5);
+var PieForma = new THREE.CylinderGeometry(1,1,5);
+TapaForma.translate(0,6,0);
+Tapa2Forma.translate(0,-6,0);
+PieForma.translate(-2,-7,0);
 
-var lataMalla = new THREE.Mesh(lataForma);
-var tapaMalla = new THREE.Mesh(tapaForma);
-var pie1Malla = new THREE.Mesh(pie1);
-var pie2Malla = new THREE.Mesh(pie2);
+var LataMalla = new THREE.Mesh(LataForma);
+var TapaMalla = new THREE.Mesh(TapaForma);
+var Tapa2Malla = new THREE.Mesh(Tapa2Forma);
+var PieMalla = new THREE.Mesh(PieForma);
 
-var rForma = new THREE.Geometry();
-rForma.merge(lataMalla.geometry, lataMalla.matrix);
-rForma.merge(tapaMalla.geometry, tapaMalla.matrix);
-rForma.merge(pie1Malla.geometry, pie1Malla.matrix); 
-rForma.merge(pie2Malla.geometry, pie2Malla.matrix);
+var LataFForma = new THREE.Geometry();
+LataFForma.merge(LataMalla.geometry, LataMalla.matrix);
+LataFForma.merge(TapaMalla.geometry, TapaMalla.matrix);
+LataFForma.merge(Tapa2Malla.geometry, Tapa2Malla.matrix);
+LataFForma.merge(PieMalla.geometry, PieMalla.matrix);
 
 var material = new THREE.MeshNormalMaterial();
-var rMalla = new THREE.Mesh(rForma, material);
+var LataMalla = new THREE.Mesh(LataFForma, material);
 var escena = new THREE.Scene();
-escena.add(rMalla);
+escena.add(LataMalla);
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 10;
+camara.position.z = 50;
 camara.position.y = 10;
 
 renderizador = new THREE.WebGLRenderer();
