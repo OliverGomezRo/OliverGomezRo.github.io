@@ -6,16 +6,6 @@ for ( var i = 0; i < 50; i ++ ) {
                      ( i - 5 ) * 3 ) );
 }
 
-var pataForma = new THREE.CylinderGeometry(1, 1, 1);
-esferaForma.translate(0,-26,0);
-
-var pataMalla = new THREE.Mesh(pataForma);
-var arbolForma = new THREE.Geometry();
-pForma.merge(pataMalla.geometry, pataMalla.matrix);
-var material = new THREE.MeshNormalMaterial();
-var pMalla = new THREE.Mesh(pForma, material);
-var escena = new THREE.Scene();
-escena.add(arbolMalla);
 
 var forma = new THREE.LatheGeometry(puntos);
 
