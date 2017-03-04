@@ -1,7 +1,7 @@
 var puntos = [];
 
-for ( var i = 0; i < 60; i ++ ) {
-    puntos.push( new THREE.Vector2(i*10 );
+for ( var i = 0; i < 10; i ++ ) {
+    puntos.push( new THREE.Vector2(i*2 );
 }
 var forma = new THREE.LatheGeometry(puntos);
 
@@ -13,7 +13,7 @@ var escena = new THREE.Scene();
 escena.add(malla);
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 500;
+camara.position.z = 50;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95 );
