@@ -1,12 +1,19 @@
 
-var points = [];
-for ( var i = 0; i < 20; i ++ ) {
-	points.push( new THREE.Vector2( Math.sin( i * 0.2 ) * 10 + 5, ( i - 5 ) * 2 ) );
+var puntos = [];
+for ( var i = 0; i < 50; i ++ ) {
+    puntos.push( new THREE.Vector2(
+                     Math.sin( i * 0.2 ) * 15 + 20,
+                     ( i - 5 ) * 3 ) );
 }
-var geometry = new THREE.LatheGeometry( points );
-var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
-var lathe = new THREE.Mesh( geometry, material );
-scene.add( lathe );
+var forma = new THREE.LatheGeometry(puntos);
+
+var material = new THREE.MeshNormalMaterial();
+
+var malla = new THREE.Mesh( forma, material );
+malla.rotateX( Math.PI/6);
+var escena = new THREE.Scene();
+escena.add(malla);
+
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 500;
 
