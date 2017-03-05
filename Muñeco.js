@@ -6,8 +6,9 @@ var cabezaMalla = new THREE.Mesh(cabezaForma);
 var cuerpoMalla = new THREE.Mesh(CuerpoForma);
 var muñecoForma = new THREE.Geometry();
 
+
 muñecoForma.merge(cabezaMalla.geometry, cabezaMalla.matrix);
-muñecoForma.merge(CuerpoMalla.geometry, CuerpoMalla.matrix);
+muñecoForma.merge(cuerpoMalla.geometry, cuerpoMalla.matrix);
 var material = new THREE.MeshNormalMaterial();
 var muñecoMalla = new THREE.Mesh(muñecoForma, material);
 var escena = new THREE.Scene();
