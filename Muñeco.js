@@ -1,11 +1,13 @@
-var cabezaForma = new THREE.SphereGeometry(2);
-cabezaForma.translate(0,1,0);
+var cabezaForma = new THREE.SphereGeometry(4);
+var CuerpoForma = new THREE.CylinderGeometry(2,2,6);
+cabezaForma.translate(0,5,0);
 
 var cabezaMalla = new THREE.Mesh(cabezaForma);
+var cuerpoMalla = new THREE.Mesh(CuerpoForma);
 var muñecoForma = new THREE.Geometry();
 
 muñecoForma.merge(cabezaMalla.geometry, cabezaMalla.matrix);
-
+muñecoForma.merge(CuerpoMalla.geometry, CuerpoMalla.matrix);
 var material = new THREE.MeshNormalMaterial();
 var muñecoMalla = new THREE.Mesh(muñecoForma, material);
 var escena = new THREE.Scene();
