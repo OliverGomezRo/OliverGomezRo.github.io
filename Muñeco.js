@@ -15,7 +15,7 @@ var escena = new THREE.Scene();
 escena.add(muñecoMalla);
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 20;
+camara.position.z = 30;
 camara.position.y = 3;
 renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95 );
