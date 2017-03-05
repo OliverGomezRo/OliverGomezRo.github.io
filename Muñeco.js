@@ -9,7 +9,7 @@ var muñecoForma = new THREE.Geometry();
 
 muñecoForma.merge(cabezaMalla.geometry, cabezaMalla.matrix);
 muñecoForma.merge(cuerpoMalla.geometry, cuerpoMalla.matrix);
-var material = new THREE.MeshNormalMaterial();
+var material = new THREE.MeshBasicMaterial({color: 0xffff00} );
 var muñecoMalla = new THREE.Mesh(muñecoForma, material);
 var escena = new THREE.Scene();
 escena.add(muñecoMalla);
