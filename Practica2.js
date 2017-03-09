@@ -19,8 +19,7 @@ var material = new THREE.MeshNormalMaterial();
 var mallaPers= new THREE.Mesh(pers, material);
 
 var escena= new THREE.Scene();
-escena.add(cubo);
-escena.add(cilindro)
+escena.add(mallaPers);
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
