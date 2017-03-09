@@ -5,7 +5,7 @@ var planoLejano = 1000;
 
 var camara= new THREE.PerspectiveCamera(campoVision, relacionAspecto, planoCercano, planoLejano);
 camara.position.z = 15;
-
+camara.position.y = 15;
 var cubo = new THREE.BoxGeometry(2,2,2);
 var cilindro = new THREE.CylinderGeometry(1,1,2);
 var mallaCubo = new THREE.Mesh(cubo);
