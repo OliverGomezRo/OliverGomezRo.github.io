@@ -6,6 +6,12 @@ var mesh ;
 var i=0;
 var j=0;
 
+THREE.ImageUtils.crossOrigin = '';
+var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/board_empty.gif');
+var material = new THREE.MeshBasicMaterial( {map: textura} );
+var forma = new THREE.BoxGeometry(1,1,1);
+
+
 var camara= new THREE.PerspectiveCamera(campoVision, relacionAspecto, planoCercano, planoLejano);
 camara.position.z = 25;
 camara.position.y = 5;
@@ -17,7 +23,7 @@ for (i=0;i<8;i++)
 {
 	for(j=0;j<8;j++)
 	{
-	mesh = new THREE.Mesh(new THREE.BoxGeometry(1,0.1,1));
+	mesh = new THREE.Mesh(forma,material);
 	mesh.position.x=i;
 	mesh.position.z=j;	
 	//mesh.rotateX(Math.PI/6);
