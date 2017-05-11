@@ -1,7 +1,7 @@
 function setup(){
 THREE.ImageUtils.crossOrigin = '';
 var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/crate.gif');
-var material = new THREE.MeshBasicMaterial( {map: textura} );
+var material = new THREE.MeshLambertMaterial( {map: textura} );
 var forma = new THREE.BoxGeometry(1,1,1);
 malla = new THREE.Mesh(forma,material);
   
