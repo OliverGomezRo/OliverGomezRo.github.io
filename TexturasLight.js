@@ -6,9 +6,9 @@ var forma = new THREE.BoxGeometry(1,1,1);
 malla = new THREE.Mesh(forma,material);
   
 var luzpuntual = new THREE.PointLight(0xFFFFFF);
-camara.luzpuntual.x=10;
-camara.luzpuntual.y=10;
-camara.luzpuntual.z=10;
+luzpuntual.position.x=10;
+luzpuntual.position.y=10;
+luzpuntual.position.z=10;
   
 escena = new THREE.Scene();
 escena.add(malla);
