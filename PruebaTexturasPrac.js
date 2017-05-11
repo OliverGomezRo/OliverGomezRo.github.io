@@ -18,7 +18,7 @@ for (i=0;i<8;i++)
 }
 
 camara = new THREE.PerspectiveCamera();
-camara.position.z=15;
+camara.position.z=25;
 
 renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
