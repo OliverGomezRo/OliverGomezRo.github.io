@@ -1,21 +1,21 @@
 function setup(){
 THREE.ImageUtils.crossOrigin = '';
-var textura = new THREE.ImageUtils.loadTexture('http://OliverGomezRo.github.io/crate.gif');
+var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/crate.gif');
 var material = new THREE.MeshBasicMaterial( {map: textura} );
-var forma = new THREE.BoxGeometry(1,4,9);
+var forma = new THREE.BoxGeometry(1,1,1);
 malla = new THREE.Mesh(forma,material);
-
-var luzPuntual = new THREE.PointLight(0xFFFFFF);
-camara.luzPuntual.x=10;
-camara.luzPuntual.y=10;
-camara.luzPuntual.z=10;
-
+  
+var luzpuntual = new THREE.PointLight(0xFFFFFF);
+camara.luzpuntual.x=10;
+camara.luzpuntual.y=10;
+camara.luzpuntual.z=10;
+  
 escena = new THREE.Scene();
 escena.add(malla);
-escena.add(luzPuntual);
+escena.add(luzpuntual);
 
 camara = new THREE.PerspectiveCamera();
-camara.position.z=10;
+camara.position.z=5;
 
 renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
