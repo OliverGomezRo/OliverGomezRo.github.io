@@ -26,7 +26,7 @@ function setup(){
 function loop(){
   obstaculo1 = raycaster.intersectObjects(cubo1);
   obstaculo2 = raycaster.intersectObjects(cubo2);
-  if (obstaculo1.length >0 && (obstaculo1[0].distance <=0.5)) || 
+  if ((obstaculo1.length >0 && (obstaculo1[0].distance <=0.5)) || 
   (obstaculo2.length >0 && (obstaculo2[0].distance <=0.5)))
   step=-step;
   
