@@ -21,13 +21,12 @@ function setup(){
   renderer.setSize(window.innerHeight*0.95,window.innerHeight*0.95);
   
   document.body.appendChild(renderer.domElement);
-  step=0.01;
+  step=1;
 }
 function loop(){
-  obstaculo1 = raycaster.intersectObjects(cubo1);
-  obstaculo2 = raycaster.intersectObjects(cubo2);
-  if ((obstaculo1.length >0 && (obstaculo1[0].distance <=0.5)) || 
-  (obstaculo2.length >0 && (obstaculo2[0].distance <=0.5)))
+  obstaculo1 = raycaster.intersectObject(cubo1);
+  obstaculo2 = raycaster.intersectObject(cubo2);
+  if ((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))||(obstaculo2.length>0 && (obstaculo2[0].distance<=0.5)))
   step=-step;
   
   pelota.position.x += step;
@@ -37,7 +36,7 @@ function loop(){
   renderer.render(escena,camara);
   requestAnimationFrame(loop); 
 }
-var cubo1, cubo2, escena, camara,renderer, pelota;
+var cubo1, cubo2, pelota, escena, camara,renderer;
 var raycaster1,raycaster2, step;
 var obstaculo1, obstaculo2;
 setup();
