@@ -38,7 +38,7 @@ function loop(){
   requestAnimationFrame(loop); 
 }
 var cubo1, cubo2, escena, camara,renderer, pelota;
-var raycaster1,raycaster2, step
+var raycaster1,raycaster2, step;
 var obstaculo1, obstaculo2;
 setup();
 loop();
