@@ -111,19 +111,18 @@ for (i=0;i<8;i++)
 	escena.add(mesh);
 	}
 }
-var lienzo = document.getElementById("luzss");
-var renderizador = new THREE.WebGLRenderer({canvas:lienzo,antialias:true});
+renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
+document.body.appendChild(renderer.domElement);
 
-renderizador.setSize(900,900);
-
-renderizador.shadowMapEnabled = true;
+renderer.shadowMapEnabled = true;
 LataMalla.castShadow = true;
 carroMalla.castShadow = true;
 mesh.receiveShadow = true;
 iluminacion.castShadow = true;
 
 
-renderizador.render(escena, camara);
+renderer.render(escena, camara);
 
 
 
