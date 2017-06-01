@@ -101,9 +101,9 @@ escena.add( carroMalla );
 escena.add(iluminacion);
 //escena.add(iluminacion1);
 
-for (i=0;i<50;i=i+7)
+for (i=0;i<8/;i++)
 {
-	for(j=0;j<70;j=j+7)
+	for(j=0;j<8;j++)
 	{
 	mesh = new THREE.Mesh(new THREE.BoxGeometry(7,0.5,7),new THREE.MeshLambertMaterial({map:textura} ));
 	mesh.position.x=i;
