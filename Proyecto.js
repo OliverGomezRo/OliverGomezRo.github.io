@@ -15,8 +15,7 @@ iluminacion1.position.x=0;
 iluminacion1.position.z=30;
 
 THREE.ImageUtils.crossOrigin = '';
-var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.githubio/board_empty.gif');
-
+var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/board_empty.gif');
 var camara= new THREE.PerspectiveCamera(campoVision, relacionAspecto, planoCercano, planoLejano);
 
 var LataForma = new THREE.CylinderGeometry(1, 1, 2);
