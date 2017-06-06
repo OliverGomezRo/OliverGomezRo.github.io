@@ -14,19 +14,19 @@ function Enviroment(){
 }
 Environment.prototype = new THREE.Scene();
 
-Environment.prototype.Scene = funciton(){
+Environment.prototype.Scene = function(){
   for(var i=0; i<this.children.length;i++){
     if(this.children[i].sense !== undefined)
       this.children[i].sense(this);
   }
 }
-Environment.prototype.plan = funciton(){
+Environment.prototype.plan = function(){
   for(var i=0; i<this.children.length;i++){
     if(this.children[i].plan !== undefined)
       this.children[i].plan(this);
   }
 }
-Environment.prototype.act = funciton(){
+Environment.prototype.act = function(){
   for(var i=0; i<this.children.length;i++){
     if(this.children[i].act !== undefined)
       this.children[i].act(this);
