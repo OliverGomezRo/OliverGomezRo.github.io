@@ -22,7 +22,7 @@ function setup(){
   renderer.setSize(window.innerHeight*0.95,window.innerHeight*0.95);
   
   document.body.appendChild(renderer.domElement);
-  step=1;
+  step=0.1;
 }
 function loop(){
   obstaculo1 = raycaster1.intersectObject(cubo1);
