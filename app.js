@@ -8,7 +8,7 @@ var pelota= THREE.Mesh(new THREE.SphereGeometry(1),new THREE.MeshPhongMaterial({
 escena = new THREE.Scene();
 	
 pelota.position.set(4, 10, 4);
-light= new THREE.PointLight(0xffffff);
+var light= new THREE.PointLight(0xffffff);
 light.position.set(4, 10, 4);
 escena.add(light);
 	
