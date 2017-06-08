@@ -39,7 +39,7 @@ function Pelota(r,x=0,y=0){
   this.step=0.1;
   this.colision=0;
   this.radio=r;
-  this.sensor=new THREE.Raycaster(this.position,new THREE.vector3(1,0,0));
+  this.sensor=new THREE.Raycaster(this.position,new THREE.Vector3(1,0,0));
 }
 Pelota.prototype=new Agent();
 
