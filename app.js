@@ -44,6 +44,6 @@ requestAnimationFrame(loop);
 
 renderer.render(escena,camara);
 }
-var camara, escena, renderer, malla;
+var camara, escena, renderer, malla, pelota;
 setup();
 loop();
