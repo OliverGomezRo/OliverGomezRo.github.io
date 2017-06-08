@@ -1,13 +1,19 @@
 function setup(){
+	
 THREE.ImageUtils.crossOrigin = '';
+	
 var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/concrete.png');
 var material = new THREE.MeshPhongMaterial( {map: textura} );
 var forma = new THREE.BoxGeometry(1,0.1,1);
 var texturaPelota = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/Pelota.png');	
 var pelota= new THREE.Mesh(new THREE.SphereGeometry(1),new THREE.MeshPhongMaterial({map: texturaPelota}));
+	
 escena = new THREE.Scene();
 	
-pelota.position.set(4, 0.5, 4);
+pelota.position.x=4;
+pelota.position.y=1;
+pelota.position.z=4;
+	
 var light= new THREE.PointLight(0xffffff);
 light.position.set(4, 10, 4);
 escena.add(light);
@@ -22,19 +28,19 @@ for (i=0;i<8;i++)
 	escena.add(malla);
 	}
 }
-
-var camara= new THREE.PerspectiveCamera(60, window.innerWidth/ window.innerHeight, 1, 1000);
+//60, window.innerWidth/ window.innerHeight, 1, 1000
+var camara= new THREE.PerspectiveCamera();
 camara.position.z=4;
 camara.position.y=6;
 camara.position.x=4;
-
+	
+escena.add(pelota);
+camara.lookAt(pelota.position);
+	
 renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 	
-escena.add(pelota);
-	
-camara.lookAt(pelota.position);
 }
 
 function loop(){
