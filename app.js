@@ -32,7 +32,7 @@ renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 	
-escena.add(pelota);
+escena.add(pelota.position);
 	
 camara.lookAt(pelota.position);
 }
