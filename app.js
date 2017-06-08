@@ -3,10 +3,10 @@ function setup(){
 THREE.ImageUtils.crossOrigin = '';
 	
 var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/concrete.png');
-var material = new THREE.MeshPhongMaterial( {map: textura} );
+var material = new THREE.MeshBasicMaterial( {map: textura} );
 var forma = new THREE.BoxGeometry(1,0.1,1);
 var texturaPelota = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/Pelota.png');	
-var pelota= new THREE.Mesh(new THREE.SphereGeometry(1),new THREE.MeshPhongMaterial({map: texturaPelota}));
+var pelota= new THREE.Mesh(new THREE.SphereGeometry(1),new THREE.MeshBasicMaterial({map: texturaPelota}));
 	
 escena = new THREE.Scene();
 	
