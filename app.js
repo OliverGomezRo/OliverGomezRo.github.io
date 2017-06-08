@@ -7,7 +7,7 @@ var texturaPelota = new THREE.ImageUtils.loadTexture('https://olivergomezro.gith
 var pelota= THREE.Mesh(new THREE.SphereGeometry(1),new THREE.MeshPhongMaterial({map: texturaPelota}));
 escena = new THREE.Scene();
 	
-pelota.position.set(4, 10, 4);
+pelota.position.set(4, 0.5, 4);
 var light= new THREE.PointLight(0xffffff);
 light.position.set(4, 10, 4);
 escena.add(light);
@@ -32,7 +32,7 @@ renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 	
-escena.add(pelota.position);
+escena.add(pelota);
 	
 camara.lookAt(pelota.position);
 }
