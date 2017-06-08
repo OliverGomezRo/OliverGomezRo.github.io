@@ -23,7 +23,7 @@ for (i=0;i<8;i++)
 	}
 }
 
-camara = new THREE.PerspectiveCamera();
+var camara= new THREE.PerspectiveCamera(60, window.innerWidth/ window.innerHeight, 1, 1000);
 camara.position.z=4;
 camara.position.y=6;
 camara.position.x=4;
