@@ -14,8 +14,10 @@ pelota.position.x=4;
 pelota.position.y=1;
 pelota.position.z=4;
 	
-
-	
+var iluminacion = new THREE.PointLight(0xFFFFFF);
+iluminacion.position.y=20;
+escena.add(iluminacion);
+		
 for (i=0;i<8;i++)
 {
 	for(j=0;j<8;j++)
@@ -33,7 +35,7 @@ camara.position.y=6;
 camara.position.x=4;
 	
 escena.add(pelota);
-camara.lookAt(pelota.position);
+//camara.lookAt(pelota.position);
 	
 renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth*.95,window.innerHeight*.95);
