@@ -6,9 +6,9 @@ var forma = new THREE.BoxGeometry(1,0.1,1);
 
 escena = new THREE.Scene();
 
-for (i=0;i<8;i++)
+for (i=0;i<50;i++)
 {
-	for(j=0;j<8;j++)
+	for(j=0;j<50;j++)
 	{
 	malla = new THREE.Mesh(forma,material);
 	malla.position.x=i;
@@ -19,7 +19,7 @@ for (i=0;i<8;i++)
 
 camara = new THREE.PerspectiveCamera();
 camara.position.z=25;
-camara.position.y=5;
+camara.position.y=10;
 camara.position.x=2;
 
 renderer = new THREE.WebGLRenderer();
