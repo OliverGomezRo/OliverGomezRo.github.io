@@ -8,9 +8,9 @@ var forma = new THREE.BoxGeometry(1,0.1,1);
 	
 escena = new THREE.Scene();
 
-var iluminacion = new THREE.PointLight(0xFFFFFF);
-iluminacion.position.y=20;
-escena.add(iluminacion);
+//var iluminacion = new THREE.PointLight(0xFFFFFF);
+//iluminacion.position.y=20;
+//escena.add(iluminacion);
 	
 for (i=0;i<8;i++)
 {
