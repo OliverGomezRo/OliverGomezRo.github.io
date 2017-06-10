@@ -14,9 +14,7 @@ pelota.position.x=4;
 pelota.position.y=1;
 pelota.position.z=4;
 	
-var light= new THREE.PointLight(0xffffff);
-light.position.set(4, 10, 4);
-escena.add(light);
+
 	
 for (i=0;i<8;i++)
 {
