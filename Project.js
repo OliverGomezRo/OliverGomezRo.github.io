@@ -18,7 +18,7 @@ for (i=0;i<50;i++)
 }
 
 camara = new THREE.PerspectiveCamera();
-camara.position.z=25;
+camara.position.z=55;
 camara.position.y=10;
 camara.position.x=2;
 
