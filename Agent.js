@@ -84,12 +84,12 @@ function setup(){
   entorno.add(camara);
   
   render = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerHeight*0.95,window.innerHeight*0.95);
-  document.body.appendChild(renderer.domElement);
+  render.setSize(window.innerHeight*0.95,window.innerHeight*0.95);
+  document.body.appendChild(render.domElement);
 }
 function loop(){
   requestAnimationFrame(loop);
-  entorno.sense();
+  entorno.sensor();
   entorno.plan();
   entorno.act();
   renderer.render(entorno,camara);  
