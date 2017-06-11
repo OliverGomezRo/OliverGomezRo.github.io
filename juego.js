@@ -326,10 +326,11 @@ star.visible = false;
 
 
 function updateRenderWorld(){
+//camara.position.x= Math.sin(cubo.rotation.x);
 camara.position.x=cubo.position.x;
-camara.position.y=cubo.position.y-18;
+camara.position.y=cubo.position.y-16;
 camara.position.z=cubo.position.z+6;
-//camara.rotate.=;
+
 Lata.position.x=cubo.position.x;
 Lata.position.y=cubo.position.y;
 Lata.position.z=cubo.position.z+2;
@@ -642,4 +643,4 @@ function teclaPulsada(e)
 				
 				animarEscena();
 				
-			}	
+			}
