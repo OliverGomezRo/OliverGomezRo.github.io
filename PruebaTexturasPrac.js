@@ -3,9 +3,16 @@ THREE.ImageUtils.crossOrigin = '';
 var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/crate.gif');
 var material = new THREE.MeshBasicMaterial( {map: textura} );
 var forma = new THREE.BoxGeometry(1,0.1,1);
-
+	
+var textura1 = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/Pelota.png');
+var bola = new THREE.Mesh(new THREE.SphereGeometry(0.5),new THREE.MeshBasicMaterial( {map: textura1} ));
+	
 escena = new THREE.Scene();
 
+escena.add(bola);
+bola.position.x=1;
+bola.position.y=1;
+bola.position.z=1;
 for (i=0;i<8;i++)
 {
 	for(j=0;j<8;j++)
