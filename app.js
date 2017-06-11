@@ -31,9 +31,9 @@ pelota.position.z=10;
 pelota.position.y=0.5;	
 	
 camara = new THREE.PerspectiveCamera();
-camara.position.z=40;
-camara.position.y=5;
-camara.position.x=10;
+camara.position.z=2;
+camara.position.y=0;
+camara.position.x=0;
 camara.lookAt( pelota.position );
 	
 renderer = new THREE.WebGLRenderer();
