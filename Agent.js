@@ -14,7 +14,7 @@ function Environment(){
 }
 Environment.prototype = new THREE.Scene();
 
-Environment.prototype.Scene = function(){
+Environment.prototype.sense = function(){
   for(var i=0; i<this.children.length;i++){
     if(this.children[i].sense !== undefined)
       this.children[i].sense(this);
