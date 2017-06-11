@@ -77,7 +77,7 @@ Pelota.prototype.act = function(environment){
 if (this.colision === 1) 	
 this.step = -this.step;
 //this.position.x += this.step;
-//this.position.z += this.step;
+this.position.z += this.step;
 };
 
 function Pared(sizex,sizey,sizez, x=0, y=0,z=0){
