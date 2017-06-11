@@ -3,12 +3,18 @@ THREE.ImageUtils.crossOrigin = '';
 var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/concrete.png');
 var material = new THREE.MeshLambertMaterial( {map: textura} );
 var forma = new THREE.BoxGeometry(1,0.1,1);
-
+	
+	var luzPuntual = new THREE.PointLight(0xffffff);
+	luzPuntual.position.x=10;
+	luzPuntual.position.y=10;
+	luzPuntual.position.z=10;
+	
 escena = new THREE.Scene();
-
-for (i=0;i<8;i++)
+escena.add(luzPuntual);
+	
+for (i=0;i<20;i++)
 {
-	for(j=0;j<8;j++)
+	for(j=0;j<20;j++)
 	{
 	malla = new THREE.Mesh(forma,material);
 	malla.position.x=i;
