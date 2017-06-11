@@ -4,7 +4,7 @@ var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/
 var material = new THREE.MeshLambertMaterial( {map: textura} );
 var forma = new THREE.BoxGeometry(1,0.1,1);
 var textura1 = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/Pelota.png');
-var pelota = new THREE.Mesh(new THREE.SphereGeometry(1), new THREE.MeshLambertMaterial({map:textura1}));
+var pelota = new THREE.Mesh(new THREE.SphereGeometry(0.2), new THREE.MeshLambertMaterial({map:textura1}));
 	
 	var luzPuntual = new THREE.PointLight(0xffffff);
 	luzPuntual.position.x=10;
