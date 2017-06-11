@@ -89,7 +89,7 @@ function setup(){
 }
 function loop(){
   requestAnimationFrame(loop);
-  entorno.sensor();
+  entorno.sense();
   entorno.plan();
   entorno.act();
   renderer.render(entorno,camara);  
