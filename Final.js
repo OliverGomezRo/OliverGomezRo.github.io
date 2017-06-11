@@ -46,7 +46,8 @@ this.children[i].act(this);
 
 function Pelota(r, x=0, y=0,z=0){
 Agent.call(this,x,y);
-this.add(new THREE.Mesh(new THREE.SphereGeometry(r), new THREE.MeshPhongMaterial({color:0xff0000})));
+var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/ball.png');
+this.add(new THREE.Mesh(new THREE.SphereGeometry(r), new THREE.MeshPhongMaterial({map:textura})));
 this.step=0.1;
 this.colision=0;
 this.radius=r;
@@ -133,8 +134,8 @@ entorno.add(meshFloor);
 	luz.shadow.camera.far = 100;
 	entorno.add(luz);
 	luz.position.set(0,10,1);
-
-pelota = new THREE.Mesh(new THREE.SphereGeometry(0.5),new THREE.MeshLambertMaterial({color:0x00cc00}));
+var textura1 = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/Pelota.png');
+pelota = new THREE.Mesh(new THREE.SphereGeometry(0.5),new THREE.MeshLambertMaterial({map:textura1}));
 entorno.add(pelota);
 
 pelota.receiveShadow=true;
