@@ -33,7 +33,7 @@ pelota.position.z=10;
 pelota.position.y=0.5;	
 	
 camara = new THREE.PerspectiveCamera();
-camara.position.z=-1;
+camara.position.z=-10;
 camara.position.y=player.height;
 camara.position.x=0;
 camara.lookAt( new THREE.Vector3(0,player.height,0));
