@@ -131,7 +131,7 @@ entorno.add(meshFloor);
 	luz.castShadow = true;
 	
 	luz.shadow.camera.near = 0.1;
-	luz.shadow.camera.far = 100;
+	luz.shadow.camera.far = 200;
 	entorno.add(luz);
 	luz.position.set(0,10,1);
 var textura1 = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/Pelota.png');
