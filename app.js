@@ -24,10 +24,11 @@ for (i=0;i<20;i++)
 }
 
 camara = new THREE.PerspectiveCamera();
-camara.position.z=25;
+camara.position.z=40;
 camara.position.y=5;
-camara.position.x=2;
-
+camara.position.x=10;
+camara.lookAt( escena.position );
+	
 renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
