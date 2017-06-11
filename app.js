@@ -2,7 +2,7 @@ function setup(){
 THREE.ImageUtils.crossOrigin = '';
 var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/concrete.png');
 var material = new THREE.MeshLambertMaterial( {map: textura} );
-var forma = new THREE.BoxGeometry(1,0.1,1);
+var forma = new THREE.BoxGeometry(2,0.1,2);
 var textura1 = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/Pelota.png');
 var pelota = new THREE.Mesh(new THREE.SphereGeometry(0.2), new THREE.MeshLambertMaterial({map:textura1}));
 	
