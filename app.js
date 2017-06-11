@@ -1,3 +1,5 @@
+var player={height:1};
+var camara, escena, renderer;
 function setup(){
 THREE.ImageUtils.crossOrigin = '';
 var textura = new THREE.ImageUtils.loadTexture('https://olivergomezro.github.io/concrete.png');
@@ -31,10 +33,10 @@ pelota.position.z=10;
 pelota.position.y=0.5;	
 	
 camara = new THREE.PerspectiveCamera();
-camara.position.z=0;
-camara.position.y=10;
+camara.position.z=-1;
+camara.position.y=player.height;
 camara.position.x=0;
-camara.lookAt( pelota.position );
+camara.lookAt( new THREE.Vector3(0,player.height,0));
 	
 renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
@@ -48,6 +50,7 @@ requestAnimationFrame(loop);
 
 renderer.render(escena,camara);
 }
-var camara, escena, renderer, malla;
+
 setup();
 loop();
+var malla;
